@@ -2,7 +2,9 @@
 	<div class="app-container">
 		<Layout>
 			<template #left>
-				<SiteAside />
+				<div class="aside">
+					<SiteAside />
+				</div>
 			</template>
 			<template>
 				<router-view />
@@ -15,6 +17,7 @@
 </template>
 
 <script>
+// import { getBlogs } from '@/api/blog.js'
 import SiteAside from '@/components/SiteAside'
 import Layout from '@/components/Layout'
 export default {
@@ -22,7 +25,11 @@ export default {
 		Layout,
 		SiteAside,
 	},
-	mounted() {},
+	// async created() {
+	// 	const res = await getBlogs()
+	// 	console.log(res)
+	// },
+	// mounted() {},
 }
 </script>
 
@@ -30,5 +37,9 @@ export default {
 @import '~@/styles/mixin.less';
 .app-container {
 	.self-fill(fixed);
+}
+.aside {
+	width: 250px;
+	height: 100%;
 }
 </style>

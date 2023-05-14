@@ -1,12 +1,13 @@
 <template>
 	<div class="site-aside-container">
 		<Aavtar
-			url="https://foruda.gitee.com/avatar/1677166113912012781/9168103_zzq20_1621910353.png!avatar200"
+			url="https://avatars.githubusercontent.com/u/72647804?v=4"
 			:size="150"
 		/>
 		<h1 class="title">q的个人空间</h1>
 		<Menu />
 		<Contact />
+		<p class="footer">黑ICP备17001719号</p>
 	</div>
 </template>
 
@@ -39,6 +40,10 @@ export default {
 		font-size: 20px;
 		color: #fff;
 		text-align: center;
+	}
+	.footer {
+		text-align: center;
+		font-size: 12px;
 	}
 }
 </style>

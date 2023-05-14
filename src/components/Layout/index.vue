@@ -1,14 +1,14 @@
 <template>
 	<div class="layout-container">
-		<header class="left">
+		<div class="left">
 			<slot name="left"></slot>
-		</header>
-		<main class="main">
+		</div>
+		<div class="main">
 			<slot></slot>
-		</main>
-		<footer class="right">
+		</div>
+		<div class="right">
 			<slot name="right"></slot>
-		</footer>
+		</div>
 	</div>
 </template>
 

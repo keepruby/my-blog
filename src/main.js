@@ -9,6 +9,9 @@ import { showMessage } from './utils'
 Vue.prototype.$showMessage = showMessage
 Vue.prototype.$http = axios
 
+import Vloading from '@/directives/loading'
+Vue.directive('loading', Vloading)
+
 new Vue({
 	router,
 	render: (h) => h(App),
