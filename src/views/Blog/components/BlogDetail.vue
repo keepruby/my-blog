@@ -7,10 +7,13 @@
 			<a href="#data-form-container">评论: {{ blog.commentNumber }}</a>
 			<a href="">{{ blog.category.name }}</a>
 		</div>
+		<div v-html="blog.htmlContent" class="markdown-body"></div>
 	</div>
 </template>
 
 <script>
+import 'highlight.js/styles/github.css'
+import '@/styles/markdown.css'
 import formatDate from '@/utils/formatDate'
 export default {
 	props: {
@@ -23,9 +26,22 @@ export default {
 		formatDate,
 	},
 	mounted() {
-		console.log(6)
+		console.log(this.blog)
 	},
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+@import '~@/styles/var.less';
+.aside {
+	font-size: 12px;
+	color: @gray;
+	a,
+	span {
+		margin-right: 15px;
+	}
+}
+.markdown-body {
+	margin: 2em 0;
+}
+</style>

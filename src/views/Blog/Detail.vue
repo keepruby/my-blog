@@ -4,7 +4,9 @@
 			<BlogDetail :blog="data" v-if="data" />
 		</div>
 		<template #right>
-			<BlogTOC />
+			<div class="right-container">
+				<BlogTOC :toc="data.toc" v-if="data" />
+			</div>
 		</template>
 	</Layout>
 </template>
@@ -31,4 +33,23 @@ export default {
 }
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.main-container {
+	box-sizing: border-box;
+	padding: 20px;
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	height: 100%;
+	overflow-y: scroll;
+}
+.right-container {
+	width: 300px;
+	height: 100%;
+	overflow-y: scroll;
+	box-sizing: border-box;
+	position: relative;
+	padding: 20px;
+}
+</style>

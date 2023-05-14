@@ -12,7 +12,7 @@
 			>
 				{{ item.aside }}</span
 			>
-			<!-- <RightList :list="i.children" /> -->
+			<RightList :list="item.children" @select="toCategory" />
 		</li>
 	</ul>
 </template>
