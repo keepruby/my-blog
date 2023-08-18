@@ -1,7 +1,8 @@
 <template>
 	<Layout>
 		<div class="main-container" v-loading="isLoading">
-			<BlogDetail :blog="data" v-if="data" />
+			<!-- <BlogDetail :blog="data" v-if="data" /> -->
+			<BlogComment v-if="!isLoading" />
 		</div>
 		<template #right>
 			<div class="right-container">
@@ -16,6 +17,7 @@ import axiosData from '@/mixins/axiosData'
 import Layout from '@/components/Layout'
 import BlogDetail from './components/BlogDetail'
 import BlogTOC from './components/BlogTOC'
+import BlogComment from './components/BlogComment'
 
 import { getBlog } from '@/api/blog'
 export default {
@@ -24,6 +26,7 @@ export default {
 		Layout,
 		BlogTOC,
 		BlogDetail,
+		BlogComment,
 	},
 	methods: {
 		async axiosData() {
