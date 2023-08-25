@@ -9,6 +9,7 @@ export default function (defaultData = null) {
 		async created() {
 			this.data = await this.axiosData()
 			this.isLoading = false
+			console.log(this.data)
 		},
 	}
 }

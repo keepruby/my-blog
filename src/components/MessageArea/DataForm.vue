@@ -47,6 +47,17 @@ export default {}
 			font-size: 12px;
 			color: @gray;
 		}
+		.button-area button {
+			position: relative;
+			cursor: pointer;
+			border: none;
+			outline: none;
+			width: 100px;
+			height: 34px;
+			color: #fff;
+			border-radius: 4px;
+			background: #6b9eee;
+		}
 	}
 	input,
 	textarea {

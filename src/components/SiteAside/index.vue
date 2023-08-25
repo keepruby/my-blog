@@ -1,7 +1,7 @@
 <template>
 	<div class="site-aside-container">
 		<Aavtar
-			url="https://avatars.githubusercontent.com/u/72647804?v=4"
+			url="https://avatars.githubusercontent.com/u/72647804?s=48&v=4"
 			:size="150"
 		/>
 		<h1 class="title">q的个人空间</h1>

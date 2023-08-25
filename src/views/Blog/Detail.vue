@@ -1,11 +1,11 @@
 <template>
 	<Layout>
 		<div class="main-container" v-loading="isLoading">
-			<!-- <BlogDetail :blog="data" v-if="data" /> -->
+			<BlogDetail :blog="data" v-if="data" />
 			<BlogComment v-if="!isLoading" />
 		</div>
 		<template #right>
-			<div class="right-container">
+			<div class="right-container" v-loading="isLoading">
 				<BlogTOC :toc="data.toc" v-if="data" />
 			</div>
 		</template>

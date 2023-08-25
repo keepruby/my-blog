@@ -304,12 +304,12 @@ Mock.mock(/^\/api\/comment\/?(\?.+)?$/, 'get', function (options) {
 		code: 0,
 		msg: '',
 		data: {
-			'total|50-200': 0,
+			total: 100,
 			[`rows|${query.limit || 10}`]: [
 				{
 					id: '@guid',
 					nickname: '@cname',
-					content: '@cparagraph(1, 10)',
+					content: '@cparagraph(1, 9)',
 					createDate: Date.now(),
 					'avatar|1': [
 						'https://qiheizhiya.oss-cn-shenzhen.aliyuncs.com/image/avatar6.jpg',
